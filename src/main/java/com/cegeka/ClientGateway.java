@@ -7,5 +7,5 @@ import org.springframework.integration.annotation.MessagingGateway;
 @MessagingGateway
 public interface ClientGateway {
     @Gateway(requestChannel = "requests")
-    String sendAndReceive(String message);
+    String echo(String message);
 }

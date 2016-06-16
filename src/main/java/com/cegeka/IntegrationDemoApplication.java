@@ -11,7 +11,7 @@ public class IntegrationDemoApplication {
 	    ConfigurableApplicationContext ctx = new SpringApplication(IntegrationDemoApplication.class).run();
 	    ClientGateway gateway = ctx.getBean(ClientGateway.class);
 	    
-	    System.out.println(gateway.sendAndReceive("testing..."));
+	    System.out.println(gateway.echo("testing..."));
 	    
 	    ctx.close();
 	}
